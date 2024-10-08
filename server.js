@@ -12,7 +12,7 @@ const app = express();
 app.use(express.static('public'))
 
 // Definir un puerto
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 // Crear la conexión a la base de datos MySQL
 const db = mysql.createConnection({
